@@ -1,6 +1,6 @@
+import { formatDistanceToNow } from 'date-fns';
 import React from 'react';
 import { Blocker } from '../types';
-import { format, formatDistanceToNow } from 'date-fns';
 
 interface BlockersListProps {
   blockers: Blocker[];

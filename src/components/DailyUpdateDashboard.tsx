@@ -1,20 +1,20 @@
-import React, { useState, useEffect } from 'react';
+import { format } from 'date-fns';
+import React, { useEffect, useState } from 'react';
+import { allAssociates, generateMockTicketUpdate } from '../data/mockData';
 import { TicketUpdate } from '../types';
-import { generateMockTicketUpdate, allAssociates } from '../data/mockData';
-import { StatusCard } from './StatusCard';
+import { AssociateSelector } from './AssociateSelector';
+import { BlockersList } from './BlockersList';
+import { DateRangePicker } from './DateRangePicker';
+import { DelayAnalysis } from './DelayAnalysis';
+import { DonutChart } from './DonutChart';
 import { ProgressTimeline } from './ProgressTimeline';
 import { ReopenHistory } from './ReopenHistory';
-import { DelayAnalysis } from './DelayAnalysis';
-import { TestingRecommendations } from './TestingRecommendations';
 import { RiskAssessment } from './RiskAssessment';
-import { BlockersList } from './BlockersList';
-import { DonutChart } from './DonutChart';
+import { StatusCard } from './StatusCard';
 import { StatusDonutChart } from './StatusDonutChart';
-import { AssociateSelector } from './AssociateSelector';
+import { TestingRecommendations } from './TestingRecommendations';
 import { TicketHistoryDropdown } from './TicketHistoryDropdown';
-import { DateRangePicker } from './DateRangePicker';
 import { VoiceNarrator } from './VoiceNarrator';
-import { format } from 'date-fns';
 
 interface DailyUpdateDashboardProps {
   ticketId: string;
